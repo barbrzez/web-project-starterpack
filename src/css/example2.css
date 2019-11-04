@@ -1,0 +1,11 @@
+.example {
+   .example2 & {
+      display: flex;
+
+   }
+
+   .hello:hover &,
+   .something & {
+      color: red;
+   }
+}
