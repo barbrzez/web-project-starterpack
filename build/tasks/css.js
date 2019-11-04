@@ -4,12 +4,12 @@ module.exports.init = function() {
    var gulp = require('gulp');
    var concat = require('gulp-concat');
    var nested = require('postcss-nested');
-   var hover = require('./postcss-hover');
+   var custom = require('./postcss-custom');
    
    gulp.task('css', function () {
       var processors = [
          nested,
-         hover
+         custom
       ];
    
       return gulp.src('./src/css/**/*.css')

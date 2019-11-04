@@ -1,19 +1,10 @@
 var postcss = require('postcss');
+var util = require('gulp-util')
 
-module.exports = postcss.plugin('postcss-hover', function (opts) {
+module.exports = postcss.plugin('postcss-custom', function (opts) {
    return function (root, result) {
       root.walkRules(function (rule) {
-         let ruleHasChanged = false;
-         for (let i = 0; i < rule.selectors.length; i++) {
-            if (rule.selectors[i].includes(":hover")) {
-               rule.selectors[i] = rule.selector.replace(rule.selectors[i], ".desktop " + rule.selectors[i]);
-               ruleHasChanged = true;
-            }
-         }
-
-         if(ruleHasChanged) {
-            rule.selector = rule.selectors.join(",");
-         }
+         util.log("Encountered the following rule in CSS: " + rule.selector);
       });
    }
 });
