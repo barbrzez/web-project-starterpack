@@ -2,4 +2,8 @@
    .hello & {
       display: inline-block;
    }
+
+   .test &{
+      display: block;
+   }
 }

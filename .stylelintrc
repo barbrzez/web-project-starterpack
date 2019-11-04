@@ -1,0 +1,8 @@
+{
+  "plugins": [
+    "./build/stylelint/custom.js"
+  ],
+  "rules": {
+    "css/custom": "true"
+  }
+}
